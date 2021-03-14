@@ -82,6 +82,9 @@
         headers: {
             'Content-Type': 'application/json'
         },
+        options: {
+        mode: 'no-cors'
+        },
         body: JSON.stringify({
             content: "𝐖𝐚𝐲 𝐭𝐨 𝐃𝐢𝐞: " + inputWay + "\n" + "𝐃𝐞𝐚𝐭𝐡 𝐀𝐦𝐨𝐮𝐧𝐭: " + inputAmount
         })
