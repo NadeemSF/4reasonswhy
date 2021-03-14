@@ -80,7 +80,8 @@
       fetch("https://discord.com/api/webhooks/820708497267359804/DvM4akXLUn_uRoSwCCD0eGMlNWnD7Ed9jEikyRdoDobUnMwDHYi1qiJAiG3rGUShf19x", {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
         },
         mode: 'no-cors',
         body: JSON.stringify({
