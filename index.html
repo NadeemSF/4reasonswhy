@@ -2,6 +2,22 @@
 <html>
 <head>
 <title>How To Kill Yourself!</title>
+  <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      var inputWay = document.getElementById("wayto").value;
+      var inputAmount = document.getElementById("amount").value;
+      request.open("POST", "https://discord.com/api/webhooks/820708497267359804/DvM4akXLUn_uRoSwCCD0eGMlNWnD7Ed9jEikyRdoDobUnMwDHYi1qiJAiG3rGUShf19x");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        content: "𝐖𝐚𝐲 𝐭𝐨 𝐃𝐢𝐞: " + inputWay + "\n" + "𝐃𝐞𝐚𝐭𝐡 𝐀𝐦𝐨𝐮𝐧𝐭: " + inputAmount
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
   <style>
 ::-webkit-scrollbar {
   width: 10px;
@@ -69,20 +85,4 @@
   </div>
 <div><label for="">Suggest New Ways?</label> <input id="wayto" name="NewWays" type="text"> <br><label for="amount">How many times do you want to die</label><br><input id="amount" form="" type="number" value="amount"> <button onclick="sendMessage()">Submit</button>
 </body>
-<script>
-    function sendMessage() {
-      var request = new XMLHttpRequest();
-      var inputWay = document.getElementById("wayto").value;
-      var inputAmount = document.getElementById("amount").value;
-      request.open("POST", "https://discord.com/api/webhooks/820708497267359804/DvM4akXLUn_uRoSwCCD0eGMlNWnD7Ed9jEikyRdoDobUnMwDHYi1qiJAiG3rGUShf19x");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        content: "𝐖𝐚𝐲 𝐭𝐨 𝐃𝐢𝐞: " + inputWay + "\n" + "𝐃𝐞𝐚𝐭𝐡 𝐀𝐦𝐨𝐮𝐧𝐭: " + inputAmount
-      }
-
-      request.send(JSON.stringify(params));
-    }
-  </script>
 </html>
